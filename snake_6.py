@@ -1,21 +1,22 @@
 # Imports & Initialisations...
 import time
-
 import pygame
+import random
 pygame.init()
 
 # Variables...
-SCREEN = pygame.display.set_mode((1000, 720))
+SCREEN = pygame.display.set_mode((1000, 720))  # display settings
 GAME_ICON = pygame.image.load('snake_icon.png')
 
-SCORE_FONT = pygame.font.SysFont("arialblack", 20)
+SCORE_FONT = pygame.font.SysFont("arialblack", 20)  # fonts
 EXIT_FONT = pygame.font.Font("freesansbold.ttf")
 MSG_FONT = pygame.font.SysFont("arialblack", 20)
 
-BLACK = (0, 0, 0)
+BLACK = (0, 0, 0)  # colour tuples
 WHITE = (255, 255, 255)
 RED = (255, 0, 0)
 GREEN = (188, 227, 199)
+YELLOW = (255, 255, 0)
 
 
 # Functions...
