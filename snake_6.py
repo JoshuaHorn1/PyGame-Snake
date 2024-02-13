@@ -9,7 +9,7 @@ SCREEN = pygame.display.set_mode((1000, 720))  # display settings
 GAME_ICON = pygame.image.load('snake_icon.png')
 
 SCORE_FONT = pygame.font.SysFont("arialblack", 20)  # fonts
-EXIT_FONT = pygame.font.Font("freesansbold.ttf")
+EXIT_FONT = pygame.font.Font("freesansbold.ttf", 20)
 MSG_FONT = pygame.font.SysFont("arialblack", 20)
 
 BLACK = (0, 0, 0)  # colour tuples
@@ -47,14 +47,18 @@ snake_x = 490  # centre point horizontally is (1000-20 snake width)/2 = 490
 snake_y = 350  # centre point vertically is (720-20 snake height)/2 = 350
 snake_x_change = 0  # holds the values of changes in the x-coordinate
 snake_y_change = 0  # holds the values of changes in the y-coordinate
+# Set random position for the food to start
+food_x = round(random.randrange(20, 1000 - 20) / 20) * 20
+food_y = round(random.randrange(20, 720 - 20) / 20) * 20
 
-quit_game = False
+quit_input = 0
 clock = pygame.time.Clock()  # sets the speed that the snake moves
 
-while not quit_game:
+while quit_input != 1:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            quit_game = True
+            quit_input = 0
+            quit_game(quit_input)
 
     # Converts user key press to snake movement
     if event.type == pygame.KEYDOWN:  # Converts user key press to movement
@@ -95,8 +99,17 @@ while not quit_game:
     pygame.draw.rect(SCREEN, RED, [snake_x, snake_y, 20, 20])
     pygame.display.update()
 
-    clock.tick(10)  # sets the speed at which each iteration of the game loop
-    # runs in frames per second (fps). In this case, it is set to 10 fps
+    # Create circle for food
+    pygame.draw.circle(SCREEN, YELLOW, [food_x, food_y], 10)
+    pygame.display.update()
+    # Detects collision between snake and food
+    if snake_x == food_x - 10 and snake_y == food_y - 10:
+        # Gives food a new random position
+        food_x = round(random.randrange(20, 1000 - 20) / 20) * 20
+        food_y = round(random.randrange(20, 720 - 20) / 20) * 20
+
+    clock.tick(5)  # sets the speed at which each iteration of the game loop
+    # runs in frames per second (fps). In this case, it is set to 5 fps
 
 quit_input = 0
 quit_game(quit_input)
