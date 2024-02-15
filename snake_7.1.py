@@ -54,32 +54,32 @@ def game_loop():
             if event.type == pygame.QUIT:
                 quit_game = True
 
-        # Converts user key press to snake movement
-        if event.type == pygame.KEYDOWN:  # Converts user key press to movement
-            # if event.key == pygame.K_a:
-            #     snake_x_change = -20
-            #     snake_y_change = 0
-            # elif event.key == pygame.K_d:
-            #     snake_x_change = 20
-            #     snake_y_change = 0
-            # elif event.key == pygame.K_w:
-            #     snake_x_change = 0
-            #     snake_y_change = -20
-            # elif event.key == pygame.K_s:
-            #     snake_x_change = 0
-            #     snake_y_change = 20
-            if event.key == pygame.K_LEFT:
-                snake_x_change = -20
-                snake_y_change = 0
-            elif event.key == pygame.K_RIGHT:
-                snake_x_change = 20
-                snake_y_change = 0
-            elif event.key == pygame.K_UP:
-                snake_x_change = 0
-                snake_y_change = -20
-            elif event.key == pygame.K_DOWN:
-                snake_x_change = 0
-                snake_y_change = 20
+            # Converts user key press to snake movement
+            if event.type == pygame.KEYDOWN:  # Converts user key press to movement
+                if event.key == pygame.K_a:
+                    snake_x_change = -20
+                    snake_y_change = 0
+                elif event.key == pygame.K_d:
+                    snake_x_change = 20
+                    snake_y_change = 0
+                elif event.key == pygame.K_w:
+                    snake_x_change = 0
+                    snake_y_change = -20
+                elif event.key == pygame.K_s:
+                    snake_x_change = 0
+                    snake_y_change = 20
+                elif event.key == pygame.K_LEFT:
+                    snake_x_change = -20
+                    snake_y_change = 0
+                elif event.key == pygame.K_RIGHT:
+                    snake_x_change = 20
+                    snake_y_change = 0
+                elif event.key == pygame.K_UP:
+                    snake_x_change = 0
+                    snake_y_change = -20
+                elif event.key == pygame.K_DOWN:
+                    snake_x_change = 0
+                    snake_y_change = 20
 
         snake_x += snake_x_change
         snake_y += snake_y_change

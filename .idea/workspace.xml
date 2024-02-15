@@ -25,7 +25,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Basic-Intro-Tasks/Sandwich Maker - Final Outcome.py" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
@@ -118,7 +118,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="snake_7" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="snake_7.0" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PyGame-Snake" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -130,7 +130,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/snake_7.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Joshu\OneDrive - Middleton Grange School\Computer Science\Yr13\3.7 &amp; 3.8 Programming\Excercises\Pygame Snake\PyGame-Snake\snake_7.0.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -163,9 +163,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.snake_7.1" />
-        <item itemvalue="Python.snake_7" />
-        <item itemvalue="Python.snake_6" />
         <item itemvalue="Python.Sandwich Maker - Final Outcome" />
+        <item itemvalue="Python.snake_7.0" />
+        <item itemvalue="Python.snake_6" />
         <item itemvalue="Python.snake_5" />
       </list>
     </recent_temporary>
