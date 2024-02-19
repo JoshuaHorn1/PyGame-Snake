@@ -132,7 +132,7 @@ def game_loop():
 
         # Keep track of the player's score
         score = snake_length - 1
-        player_score(score, WHITE)
+        player_score(score, WHITE, )
 
         # Get highscore
         high_score = update_high_score(score, high_score)
@@ -178,7 +178,7 @@ def draw_snake(snake_list):
 
 
 # Display player score throughout the game
-def player_score(score, score_colour, hi_score):
+def player_score(score, score_colour, hi_score=0):
     # Current score
     display_score = SCORE_FONT.render(f"Score: {score}", True, score_colour)
     SCREEN.blit(display_score, (940, 700))  # coordinates for top-right
