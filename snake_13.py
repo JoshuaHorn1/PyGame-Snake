@@ -35,7 +35,6 @@ def game_loop():
 
     # Load the high score
     high_score = load_high_score()
-    print(f"high_score test: {high_score}")  # for testing only
 
     quit_game = False
     game_over = False
@@ -132,7 +131,7 @@ def game_loop():
 
         # Keep track of the player's score
         score = snake_length - 1
-        player_score(score, WHITE, )
+        player_score(score, WHITE, high_score)
 
         # Get highscore
         high_score = update_high_score(score, high_score)
@@ -209,7 +208,7 @@ def update_high_score(score, high_score):
 
 
 def save_high_score(high_score):
-    high_score_file = open("HI_score.txt")
+    high_score_file = open("HI_score.txt", 'w')
     high_score_file.write(str(high_score))
     high_score_file.close()
 
